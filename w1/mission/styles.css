@@ -1,0 +1,51 @@
+body, h1, p, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+header {
+    text-align: center;
+    margin: 0 auto 20px; 
+    max-width: 600px; 
+    border-bottom: 2px solid black;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 35px;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+header p {
+    color: #006EB6;
+    letter-spacing: 2px;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto 20px; 
+}
+
+.italicized {
+    font-style: italic;
+}
+
+div p{
+    padding-left: 40px;
+}
+
+footer {
+    text-align: center; 
+    margin-top: 40px; 
+}
+
+footer img {
+    width: 150px;
+}
