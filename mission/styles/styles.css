@@ -23,9 +23,11 @@ h1 {
     line-height: 1.5;
 }
 
-header p {
+header h2 {
     color: #006EB6;
+    margin: 0;
     letter-spacing: 2px;
+    font-size: larger;
 }
 
 p {
@@ -39,6 +41,19 @@ p {
 
 div p{
     padding-left: 40px;
+}
+
+select {
+    margin: 0 auto;
+    display: block; 
+}
+
+.dark {
+    background-color: #333;
+    color:white;
+}
+.dark h2{
+    color: lightblue;
 }
 
 footer {
