@@ -20,6 +20,7 @@ nav {
     border-bottom: 3px solid white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 3rem;
 }
 ul {
     grid-column: 3;
@@ -42,6 +43,22 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     
 }
+
+
+.left-side{
+    text-align: right;
+    margin-right: 6rem;
+}
+.left-side div{
+    border-right: 3px solid white;
+    padding-right: 20px;
+    margin-bottom: 2rem;
+}
+.left-side div p {
+    margin-bottom: -8px;
+}
+
+
 img {
     max-width: 300px;
     height: auto;
@@ -51,7 +68,23 @@ img {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
-p {
+#doa {
     font-size: 20px;
     color: white;
 }
+p {
+    color: white;
+}
+.middle{
+    margin-top: -8px;
+}
+.middle div img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.right-side{
+    border: 3px solid white;
+}
+
