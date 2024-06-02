@@ -1,0 +1,29 @@
+form {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card-front {
+    background-color: lightblue;
+    width: 525px;
+    height: 350px;
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    margin-top: -2rem;
+    margin-left: -6rem;
+    border-radius: 8px;
+}
+
+.card-back {
+    background-color: green;
+    width: 525px;
+    height: 350px;
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    border-radius: 8px;
+}
