@@ -1,29 +1,64 @@
-form {
-    text-align: center;
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.front{
+    background-color: bisque;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    max-width: 400px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
 }
 
-.card-front {
-    background-color: lightblue;
-    width: 525px;
-    height: 350px;
-    grid-column: 2;
-    grid-row: 2;
-    position: relative;
-    margin-top: -2rem;
-    margin-left: -6rem;
-    border-radius: 8px;
+label, input{
+    margin-left: 1.5rem;
+    height: 25px;
+    
 }
 
-.card-back {
-    background-color: green;
-    width: 525px;
-    height: 350px;
-    grid-column: 2;
+#total {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#images{
+    grid-column: 3/4;
+    grid-row: 1;
+    text-align: center;
+}
+
+#cardn{
+    grid-column: 1/4;
     grid-row: 2;
-    margin-top: 2rem;
-    margin-left: 6rem;
-    border-radius: 8px;
+}
+#cardn input{
+    width: 310px;
+}
+
+#card-holder{
+    grid-column: 1;
+    grid-row: 3;
+}
+#expiration {
+    text-align: center;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+#expiration input{
+    width: 30px;
+    margin: 0;
+}
+label {
+    display: block;
+}
+
+.back{
+    background-color: bisque;
+    
 }
