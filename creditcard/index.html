@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <form action="">
+    <form action="#" method="post">
         <div class="front">
             <div id="total">
                 <label for="total">TOTAL: $199</label>
@@ -20,12 +21,12 @@
 
             <div id="cardn">
                 <label for="card-number">CARD NUMBER</label>
-                <input type="text">
+                <input type="text" placeholder="1234 5678 9101 1121">
             </div>
 
             <div id="card-holder">
                 <label for="card-holder">CARD HOLDER</label>
-                <input type="text">
+                <input type="text" placeholder="John Doe">
             </div>
 
             <div id="expiration">
@@ -40,9 +41,14 @@
 
             </div>
 
-            <div id="cvc/cvv">
-
+            <div id="cvc-cvv">
+                <label for="cvc/cvv">CVC/CVV</label> 
+                <input type="text" placeholder="xxx">
             </div>
+        </div>
+
+        <div id="sub">
+            <input type="submit" value="submit">
         </div>
     </form>
 </body>
