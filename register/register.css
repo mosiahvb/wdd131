@@ -36,6 +36,21 @@
   fieldset {
     margin-bottom: 2em;
   }
+
+  .participants{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #add{
+    grid-column: 1;
+  }
+
+  section {
+    padding: 5px;
+  }
+
+
   input,
   select,
   textarea {
