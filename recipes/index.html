@@ -14,7 +14,8 @@
     <meta name="twitter:card" content="/Users/mosiahvaldez-bates/Desktop/Spring semester 2024/wdd-131/wdd131/recipes/images/black-beans-and-rice.jpg">
     <link rel="stylesheet" href="styles/recipes.css">
     <link rel="icon" href="images/favicon.ico">
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" type="module" defer></script>
+
 </head>
 <body>
     <header>
@@ -28,22 +29,9 @@
             <button type="submit" id="submit">🔎</button>
         </form>
 
-        <div class="recipes">
-            <img src="./images/apple-crisp.jpg" alt="">
 
-            <div class="name">
-                <h2>dessert</h2>
-                <p>Apple Crisp</p>
-                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p id="about">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-            </div>
-
+        <div class="recipes" id="recipes">
+            
         </div>
 
     </main>
