@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Aid</title>
+
+    <link rel="stylesheet" href="/final-project/styles/header_footer.css">
+    <link rel="stylesheet" href="/final-project/styles/styles.css">
+    <script src="/final-project/scripts/header.js" defer></script>
+    <script src="/final-project/scripts/calendar.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">First Aid</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="/final-project/index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="/final-project/calendar.html" class="active">Calendar</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+         
+        <h2>Welcome To Your Planner</h2>
+        <p>The following is a planner for you to use added the things you must do and the things you want to do to maximize your time and see what you were able to accomplish in a day, in a year and in your life!</p>
+        
+        <section class="main-container">
+            <div class="inspiration">
+                <img src="/final-project/img/Inspiration.jpg" alt="Image of a computer screen saying two more">
+
+            </div>
+
+            <div class="todo-app">
+                <h2>To-Do List</h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add To-Do items here">
+                    <button onclick="addTask()">Add</button>
+                </div>
+
+                <ul id="list-container">
+                    
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+   <footer>
+        <p>&mywebsite</p>
+    </footer> 
+    
+</body>
+</html>
