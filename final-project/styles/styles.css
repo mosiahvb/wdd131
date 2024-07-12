@@ -119,3 +119,13 @@ button {
     border-radius: 4px;
     padding: 10px;
 }
+
+@media screen and (max-width: 890px) {
+
+    .inspiration {
+        display: none;
+    }
+    .todo-app {
+        grid-column: 1/4;
+    }
+}

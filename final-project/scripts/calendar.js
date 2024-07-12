@@ -11,16 +11,20 @@ function addTask() {
 
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
+        // Needed to do this to generate an ID for each check box, so lighthouse would not give me an error.
+        let checkboxId = "checkbox-" + new Date().getTime();
+        checkbox.id = checkboxId;
         checkbox.addEventListener("change", function() {
             li.classList.toggle("checked");
             saveData();
         });
 
-        let taskText = document.createElement("span");
-        taskText.textContent = inputBox.value;
+        let label = document.createElement("label");
+        label.htmlFor = checkboxId;
+        label.textContent = inputBox.value;
 
         checkboxContainer.appendChild(checkbox);
-        checkboxContainer.appendChild(taskText);
+        checkboxContainer.appendChild(label);
         li.appendChild(checkboxContainer);
 
         let deleteBtn = document.createElement("button");
