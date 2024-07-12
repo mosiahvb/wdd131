@@ -26,7 +26,21 @@ main img {
     height: auto;
 
 }
-#topic-contant {
+
+.contant section {
+    background-color: #415A77;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 4px;
+}
+.contant section p {
+    margin-bottom: 0.2rem;
+}
+/* #topic-contant {
     background-color: #415A77;
     display: flex;
     flex-direction: column;
@@ -38,7 +52,7 @@ main img {
 }
 #topic-contant p {
     margin-bottom: 0.2rem;
-} 
+}  */
 
 .main-container {
     display: grid;
