@@ -1,4 +1,4 @@
-import { successTemplate, participantTemplate } from './Templates.js';
+import { successTemplate, participantTemplate } from './templates.js';
 
 let participantCount = 1;
 const button1 = document.getElementById('add');
