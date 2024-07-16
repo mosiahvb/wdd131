@@ -83,9 +83,11 @@ input {
     border-radius: 4px;
     font-size: large;
 }
-li.checked span{
+.checked label{
     text-decoration: line-through;
+    color: gray;
 }
+
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -120,6 +122,8 @@ button {
     border-radius: 4px;
     padding: 10px;
 }
+
+
 
 @media screen and (max-width: 890px) {
 

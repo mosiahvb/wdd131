@@ -15,7 +15,7 @@ function addTask() {
         let checkboxId = "checkbox-" + new Date().getTime();
         checkbox.id = checkboxId;
         checkbox.addEventListener("change", function() {
-            li.classList.toggle("checked");
+            li.classList.toggle("checked", this.checked);
             saveData();
         });
 
@@ -43,24 +43,56 @@ function addTask() {
 }
 
 function saveData() {
-    localStorage.setItem("data", listContainer.innerHTML);
+    let tasks = [];
+    listContainer.querySelectorAll("li").forEach(li => {
+        let checkbox = li.querySelector("input[type=checkbox]");
+        let task = {
+            text: li.querySelector("label").textContent,
+            checked: checkbox.checked
+        };
+        tasks.push(task);
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function loadData() {
-    listContainer.innerHTML = localStorage.getItem("data");
-    listContainer.querySelectorAll("input[type=checkbox]").forEach(checkbox => {
-        checkbox.addEventListener("change", function() {
-            checkbox.parentElement.parentElement.classList.toggle("checked");
-            saveData();
-        });
-    });
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+    if (tasks) {
+        tasks.forEach(task => {
+            let li = document.createElement("li");
+            let checkboxContainer = document.createElement("div");
+            checkboxContainer.classList.add("checkbox-container");
 
-    listContainer.querySelectorAll(".delete-btn").forEach(deleteBtn => {
-        deleteBtn.addEventListener("click", function() {
-            deleteBtn.parentElement.remove();
-            saveData();
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.checked = task.checked;
+            if (task.checked) {
+                li.classList.add("checked");
+            }
+            checkbox.addEventListener("change", function() {
+                li.classList.toggle("checked", this.checked);
+                saveData();
+            });
+
+            let label = document.createElement("label");
+            label.textContent = task.text;
+
+            checkboxContainer.appendChild(checkbox);
+            checkboxContainer.appendChild(label);
+            li.appendChild(checkboxContainer);
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerHTML = "X";
+            deleteBtn.classList.add("delete-btn");
+            deleteBtn.addEventListener("click", function() {
+                li.remove();
+                saveData();
+            });
+
+            li.appendChild(deleteBtn);
+            listContainer.appendChild(li);
         });
-    });
+    }
 }
 
 loadData();
